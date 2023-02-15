@@ -5,12 +5,12 @@ networks:
         driver: bridge
 
 services:
-    laravel9:
+    laravel:
         build: 
             context: .
             dockerfile: Dockerfile
-        image: laravel9
-        container_name: laravel9
+        image: laravel
+        container_name: laravel
         restart: unless-stopped
         tty: true
         working_dir: /var/www/html
@@ -30,10 +30,10 @@ services:
         ports: 
             - 3306:3306
         environment: 
-            MYSQL_DATABASE: laravel8
+            MYSQL_DATABASE: laravel
             MYSQL_ROOT_PASSWORD: 123456
             MYSQL_PASSWORD: 123456
-            MYSQL_USER: laravel8
+            MYSQL_USER: laravel
             SERVICE_TAGS: dev
             SERVICE_NAME: mysql
         networks:
