@@ -50,3 +50,5 @@ RUN chown -R www-data:www-data storage
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 RUN composer install --ignore-platform-reqs
+
+EXPOSE 9000
